@@ -31,7 +31,7 @@ const Logo = styled(Link)`
 `
 
 const MenuBars = styled.i`
-  
+  display: none;
 `
 
 const NavMenu = styled.div`
@@ -53,7 +53,7 @@ const NavBtn = styled.div`
 const Navbar = () => {
   return (
     <Nav>
-      <Logo to='/'>ELIXR</Logo>
+      <Logo to='/'>CHOP</Logo>
       <MenuBars />
       <NavMenu>
         {menuData.map((item, index) => (
