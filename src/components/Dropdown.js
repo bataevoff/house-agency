@@ -19,12 +19,51 @@ const DropdownContainer = styled.div`
   opacity: 1;
 `
 
-const Icon = styled.div``
-const CloseIcon = styled(FaTimes)``
-const DropdownWrapper = styled.div``
-const DropdownMenu = styled.div``
-const DropdownLink = styled(Link)``
-const BtnWrap = styled.div``
+const Icon = styled.div`
+  position: absolute;
+  top: 1.2rem;
+  right: 1.5rem;
+  background: transparent;
+  font-size: 2rem;
+  cursor: pointer;
+  outline: none;
+`
+const CloseIcon = styled(FaTimes)`
+  color: #000d1a;
+`
+const DropdownWrapper = styled.div`
+  
+`
+const DropdownMenu = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 80px);
+  text-align: center;
+  margin-bottom: 4em;
+  
+  @media screen and (max-width: 480px) {
+    grid-template-rows: repeat(4, 60px);
+  }
+`
+const DropdownLink = styled(Link)`
+  display: flex;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  text-decoration: none;
+  list-style: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  
+  &:hover {
+    color: #000d1a;
+  }
+`
+const BtnWrap = styled.div`
+  display: flex;
+  justify-content: center;
+`
 
 const Dropdown = () => {
   return (
