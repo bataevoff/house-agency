@@ -16,7 +16,8 @@ const DropdownContainer = styled.div`
   top: 0;
   left: 0;
   transition: 0.3s ease-in-out;
-  opacity: 1;
+  opacity: ${({ isOpen }) => ( isOpen ? '1' : '0' )};
+  top: ${({ isOpen }) => ( isOpen ? '0' : '-100%' )};
 `
 
 const Icon = styled.div`
@@ -65,10 +66,10 @@ const BtnWrap = styled.div`
   justify-content: center;
 `
 
-const Dropdown = () => {
+const Dropdown = ({ isOpen, toggle }) => {
   return (
-    <DropdownContainer>
-      <Icon>
+    <DropdownContainer isOpen={isOpen} onClick={toggle}>
+      <Icon onClick={toggle}>
         <CloseIcon />
       </Icon>
       <DropdownWrapper>
