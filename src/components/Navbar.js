@@ -4,11 +4,9 @@ import { Link } from 'react-router-dom'
 import { menuData } from '../data/MenuData';
 import { Button } from './Button';
 import Bars from '../images/bars.svg'
-import { FaBars } from 'react-icons/fa';
 
 const Nav = styled.nav`
   height: 60px;
-  background-color: red;
   display: flex;
   justify-content: space-between;
   padding: 1rem 2rem;
@@ -32,13 +30,6 @@ const Logo = styled(Link)`
   font-style: italic;
 `
 
-// const MenuBars = styled(FaBars)`
-//   display: none;
-//
-//   @media screen and (max-width: 768px) {
-//     display: block;
-//   }
-// `
 const MenuBars = styled.i`
   display: none;
   
